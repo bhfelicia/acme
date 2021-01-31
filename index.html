@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <style>
+      body {
+        font-family: verdana;
+      }
+      #title {
+        display: flex;
+        justify-content: space-around;
+      }
+      .container {
+        border: solid 2px orange;
+        display: flex;
+      }
+      #lists {
+        display: flex;
+        justify-content: space-around;
+      }
+      #lists > div {
+        border: solid 1px orange;
+        flex-basis: 30%;
+        height: 500px;
+      }
+      .buttons {
+        display: flex;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="title">
+      <h1>Acme First, Second, Third</h1>
+    </div>
+    <div id="lists">
+      <div id="first">
+        <div class="buttons">
+          <button class="forward">></button>
+          <button class="backward"><</button>
+        </div>
+        <h2 class="headers">FIRST</h2>
+        <div id="1"></div>
+        <div id="2"></div>
+        <div id="3"></div>
+        <div id="4"></div>
+      </div>
+      <div id="second">
+        <div class="buttons">
+          <button class="forward">></button>
+          <button class="backward"><</button>
+        </div>
+        <h2 class="headers">SECOND</h2>
+      </div>
+      <div id="third">
+        <div class="buttons">
+          <button class="forward">></button>
+          <button class="backward"><</button>
+        </div>
+        <h2 class="headers">THIRD</h2>
+      </div>
+    </div>
+  </body>
+</html>
