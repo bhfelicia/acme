@@ -12,17 +12,52 @@ function selectName(evt) {
   } else {
     currName.classList.remove("selected");
   }
-  console.log(currName.className);
 }
 
 function colorizeName(elem) {
   elem.classList.add("selected");
 }
 
-function moveNamesLeft(evt) {}
+function moveNamesRight(evt) {
+  currButton = evt.target;
+  const selectedNames = [...document.getElementsByClassName("selected")];
+  if (currButton.id === "forward1") {
+    const newParent = document.getElementById("second");
+    selectedNames.forEach((name) => {
+      name.parentNode.removeChild(name);
+      newParent.appendChild(name);
+    });
+  } else if (currButton.id === "forward2") {
+    const newParent = document.getElementById("third");
+    selectedNames.forEach((name) => {
+      name.parentNode.removeChild(name);
+      newParent.appendChild(name);
+    });
+  }
+}
 
-function moveNamesRight() {}
+function moveNamesLeft(evt) {
+  currButton = evt.target;
+  const selectedNames = [...document.getElementsByClassName("selected")];
+  if (currButton.id === "backward2") {
+    const newParent = document.getElementById("first");
+    selectedNames.forEach((name) => {
+      name.parentNode.removeChild(name);
+      newParent.appendChild(name);
+    });
+  } else if (currButton.id === "backward3") {
+    const newParent = document.getElementById("second");
+    selectedNames.forEach((name) => {
+      name.parentNode.removeChild(name);
+      newParent.appendChild(name);
+    });
+  }
+}
 
-const buttons = document.getElementById("lists");
+const elements = document.getElementById("lists");
 
-buttons.addEventListener("click", selectName);
+elements.addEventListener("click", selectName);
+
+elements.addEventListener("click", moveNamesRight);
+
+elements.addEventListener("click", moveNamesLeft);
