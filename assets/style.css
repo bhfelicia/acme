@@ -1,0 +1,41 @@
+body {
+  font-family: verdana;
+}
+#title {
+  display: flex;
+  justify-content: space-around;
+}
+#lists {
+  display: flex;
+  justify-content: space-around;
+}
+#lists > div {
+  border: solid 1px orangered;
+  flex-basis: 30%;
+  height: 470px;
+  padding: 1rem;
+  margin: 1rem;
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+button {
+  height: 60px;
+  border: solid 0.5px grey;
+}
+.colorful {
+  background-color: orangered;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50px;
+  padding: 0.5rem;
+  border: solid 0.5px grey;
+}
+.selected {
+  background-color: orangered;
+}
