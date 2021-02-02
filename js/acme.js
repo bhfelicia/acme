@@ -24,14 +24,18 @@ function moveNamesRight(evt) {
   if (currButton.id === "forward1") {
     const newParent = document.getElementById("second");
     selectedNames.forEach((name) => {
-      name.parentNode.removeChild(name);
-      newParent.appendChild(name);
+      if (name.parentNode.id === "first") {
+        name.parentNode.removeChild(name);
+        newParent.appendChild(name);
+      }
     });
   } else if (currButton.id === "forward2") {
     const newParent = document.getElementById("third");
     selectedNames.forEach((name) => {
-      name.parentNode.removeChild(name);
-      newParent.appendChild(name);
+      if (name.parentNode.id === "second") {
+        name.parentNode.removeChild(name);
+        newParent.appendChild(name);
+      }
     });
   }
 }
@@ -42,14 +46,18 @@ function moveNamesLeft(evt) {
   if (currButton.id === "backward2") {
     const newParent = document.getElementById("first");
     selectedNames.forEach((name) => {
-      name.parentNode.removeChild(name);
-      newParent.appendChild(name);
+      if (name.parentNode.id === "second") {
+        name.parentNode.removeChild(name);
+        newParent.appendChild(name);
+      }
     });
   } else if (currButton.id === "backward3") {
     const newParent = document.getElementById("second");
     selectedNames.forEach((name) => {
-      name.parentNode.removeChild(name);
-      newParent.appendChild(name);
+      if (name.parentNode.id === "third") {
+        name.parentNode.removeChild(name);
+        newParent.appendChild(name);
+      }
     });
   }
 }
